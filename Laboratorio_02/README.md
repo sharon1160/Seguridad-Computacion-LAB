@@ -51,18 +51,18 @@ def vignere(texto, clave, modulo):
   pausa = str(input("\nPresione enter para regresar..."))
 ```
 
+#### Texto Plano
+
+```
+Hermoso es el cielo en el atardecer de tus ojos maravillosos
+```
+
 <p align="center">
   <img src="src/pregunta_10/screens/main_menu.png"/>
 </p>
 <p align="center">
 <img src="src/pregunta_10/screens/modulo_menu.png" />
 </p>
-
-#### Texto Plano
-
-```
-Hermoso es el cielo en el atardecer de tus ojos maravillosos
-```
 
 #### Resultado con módulo 27
 
@@ -86,6 +86,11 @@ pensar en algo positivo puede cambiar el transcurso de todo el día. No eres lo 
 viejo como para no iniciar un nuevo camino hacia tus sueños. Levántate cada mañana creyendo
 que vas a vivir el mejor día de tu vida.
 ```
+
+<p align="center">
+<img src="src/pregunta_11/screens/main_menu.png" />
+</p>
+
 #### Resultado con módulo 27
 
 ```
