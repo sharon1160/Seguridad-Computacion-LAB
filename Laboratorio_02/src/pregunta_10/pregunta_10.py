@@ -106,7 +106,7 @@ def menu():
       file_name = str(input("\nIngrese nombre del archivo (Ej: archivo.txt):\n"))
       clave = str(input("\nIngrese la clave de cifrado:\n"))
       os.system("clear") 
-      with open("../txt/" + file_name, 'r', encoding = 'utf-8-sig') as entrada:
+      with open(file_name, 'r', encoding = 'utf-8-sig') as entrada:
         texto = entrada.read()
         menu_modulo(texto, clave)
     elif opcion == 2:
