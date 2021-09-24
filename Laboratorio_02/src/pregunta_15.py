@@ -4,7 +4,7 @@ clave = 'HIELO'
 
 
 def descifrar(texto,clave):
-    k=0;
+    k=0
     descifrado=''
     for i in texto:
         TamClave = len(clave)
