@@ -14,7 +14,7 @@ def cifrar(texto, clave, modulo):
   texto_claro = texto
   texto = eliminar_espacios_signos(texto)
   texto = a_mayusculas(texto)
-  pausa = str(input("\nPresione una tecla para regresar..."))
+  pausa = str(input("\nPresione enter para regresar..."))
 
 ######################## MENUS ########################
 
