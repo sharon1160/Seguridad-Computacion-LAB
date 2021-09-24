@@ -31,11 +31,6 @@ def preprocesar(texto):
   texto = quitar_tildes(texto)
   texto = a_mayusculas(texto)
   return texto, texto_claro
-
-############## FUNCIONES PARA EL CIFRADO ###############
-
-def calcular_letra_cifrada(m, k, n):
-  return (m + k) % n
   
 ####################### CIFRADO ########################
 
@@ -50,7 +45,7 @@ def cifrar(texto, clave, modulo):
     for car in texto:
       caracterText_index = alfabeto.index(car)
       caracterClav_index = alfabeto.index(clave[ind])
-      posicion_cifra = calcular_letra_cifrada(caracterText_index, caracterClav_index, 27)
+      posicion_cifra = (caracterText_index + caracterClav_index) % 27
       texto_cifrado += alfabeto[posicion_cifra]
       ind += 1
       if ind == len(clave): 
