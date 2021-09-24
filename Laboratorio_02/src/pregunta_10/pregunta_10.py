@@ -50,7 +50,9 @@ def cifrar(texto, clave, modulo):
       ind += 1
       if ind == len(clave): 
         ind = 0
-    print("TEXTO CIFRADO:\n",texto_cifrado,'\n')
+    with open('texto-cifrado_27.txt', 'w') as output:
+      output.write(texto_cifrado)
+    print("TEXTO CIFRADO (modulo 27):\n\n",texto_cifrado,'\n')
   elif modulo == 191:
     texto_cifrado = ""
     alfabeto = [chr(i) for i in range(33, 225)]
@@ -58,14 +60,14 @@ def cifrar(texto, clave, modulo):
     for car in texto:
       caracterText_index = alfabeto.index(car)
       caracterClav_index = alfabeto.index(clave[ind])
-      posicion_cifra = calcular_letra_cifrada(caracterText_index, caracterClav_index, 191)
+      posicion_cifra = (caracterText_index + caracterClav_index) % 191
       texto_cifrado += alfabeto[posicion_cifra]
       ind += 1
       if ind == len(clave): 
         ind = 0
     with open('texto-cifrado.txt', 'w') as output:
       output.write(texto_cifrado)
-    print("TEXTO CIFRADO:\n",texto_cifrado,'\n')
+    print("TEXTO CIFRADO (modulo 191):\n\n",texto_cifrado,'\n')
 
   pausa = str(input("\nPresione enter para regresar..."))
 
