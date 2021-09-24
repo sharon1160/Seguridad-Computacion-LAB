@@ -1,4 +1,7 @@
 import os
+import string
+
+################## PREPROCESAMIENTO ##################
 
 def a_mayusculas(texto):
   return texto.upper()
@@ -10,10 +13,52 @@ def eliminar_espacios_signos(texto):
   texto = texto.replace(' ','').replace('\n','')
   return texto
 
+def quitar_tildes(texto):
+  reemplazosVocales = [
+    ('á','a'),
+    ('é','e'),
+    ('í','i'),
+    ('ó','o'),
+    ('ú','u')
+  ]
+  for a1, a2 in reemplazosVocales:
+    texto = texto.replace(a1, a2)
+  return texto
+
+############## FUNCIONES PARA EL CIFRADO ###############
+
+def generar_alfabeto():
+  lista_letras = list(string.ascii_uppercase)
+  posicion = lista_letras.index('N')
+  lista_letras = lista_letras[:posicion + 1] + ['Ñ'] + lista_letras[posicion + 1:]
+  return lista_letras # 27 letras
+
+def escribir_clave(texto, clave):
+  tabla_cifrado = []
+  clave_repetida = []
+  texto_lista = list(texto)
+  tabla_cifrado.append(texto_lista)
+  index = 0
+  for i in range(len(texto_lista)):
+    if index == len(clave):
+      index = 0
+    clave_repetida.append(clave[index])
+    index += 1
+  tabla_cifrado.append(clave_repetida)
+  return tabla_cifrado
+
+
+####################### CIFRADO ########################
+
 def cifrar(texto, clave, modulo):
   texto_claro = texto
   texto = eliminar_espacios_signos(texto)
+  texto = quitar_tildes(texto)
   texto = a_mayusculas(texto)
+
+  tabla_de_cifrado = escribir_clave(texto, clave)
+  print(tabla_de_cifrado)
+  print()
   pausa = str(input("\nPresione enter para regresar..."))
 
 ######################## MENUS ########################
