@@ -76,6 +76,27 @@ JMVWDUWIDSNKMOZQMQOZCBECRGKICRGBYDDLWWWOTIZSZNWWZH
 jmvx}uwi~snkmpzqmrpzc|e}rgki}rg|y~}lwwxotiztznwwz
 ```
 
+### 11) Verificar cifrando “Creer que es posible es el paso número uno hacia el éxito. Despertarse y ...". Usando la clave POSITIVO
+
+#### Texto Plano
+
+```
+Creer que es posible es el paso número uno hacia el éxito. Despertarse y
+pensar en algo positivo puede cambiar el transcurso de todo el día. No eres lo suficientemente
+viejo como para no iniciar un nuevo camino hacia tus sueños. Levántate cada mañana creyendo
+que vas a vivir el mejor día de tu vida.
+```
+#### Resultado con módulo 27
+
+```
+RGWMLYPSTHIWMPWZTSLMEXVHEBNTXZKJCDZIVPVSASPPNWYSIEWZNINHTNIMGAVGTBSSZWLDIWMPOWLJTRWKTTWWPGWSNZVBIQNZMWYSJDVWXSYWPBHMLMÑZEHNNBKDSCIWTXUOSLWWQIKKAEESZTUKWCWUPTZPBCJWDIKVAXBHOTKDOJJLAÑMJDIZWDTUOOJSUIWIHODOFIVZZNTBVWKCZKPHSDBDDGTZEMCWNRXOVMNCQWSO
+```
+
+#### Resultado con módulo 191
+
+```
+rwmystwqwztsmxv~|uxz}}zivqvs{sqwys~wzitm{vt|stzw}wqwtrwktuwwpwtzv|qzwys}vwxtywp|mmz~n|k~s}wuxvswwrk{~~sztvw}wuqtz|}w~kv{x|ptk~o{mG}zw~tvosuiwioAoivzzt|vw}zps~|~~tzm}wrxovm}wso
+```
 
 ### 15) Desarrolle un algoritmo que encuentre el texto claro si recibió la cifra WPIXHVYYOSRTECSZBEEGHUUFWRWTZGRWUFSRIWESSXVOHAIHOHWWHCWHUZOBOZEAOYBMCRLTEYOTI y se sabe que ha cifrado con la clave HIELO
 
