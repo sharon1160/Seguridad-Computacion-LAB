@@ -8,7 +8,7 @@ El código fuente fue desarrollado en Python.
 
 
 ```python
-def cifrar(texto, clave, modulo):
+def vignere(texto, clave, modulo):
   
   # Preprocesando texto plano
   texto, texto_claro = preprocesar(texto)
