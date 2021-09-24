@@ -7,7 +7,7 @@ El código fuente fue desarrollado en Python.
 ### 10) Implementar un cifrador de Vignere, donde se pueda seleccionar el módulo, alfabeto módulo 27 o módulo 191 (ASCII)
 
 
-```
+```python
 def cifrar(texto, clave, modulo):
   
   # Preprocesando texto plano
