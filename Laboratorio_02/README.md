@@ -77,7 +77,7 @@ jmvx}uwi~snkmpzqmrpzc|e}rgki}rg|y~}lwwxotiztznwwz
 ```
 
 
-### 15) Desarrolle un algoritmo que encuentre el texto claro si recibió la cifra WPIXHVYYOSRTECSZBEEGHUUFWRWTZGRWUFSRIWESSXVOHAIHOHWWHCWH UZOBOZEAOYBMCRLTEYOTI, y se sabe que ha cifrado con la clave HIELO
+### 15) Desarrolle un algoritmo que encuentre el texto claro si recibió la cifra WPIXHVYYOSRTECSZBEEGHUUFWRWTZGRWUFSRIWESSXVOHAIHOHWWHCWHUZOBOZEAOYBMCRLTEYOTI y se sabe que ha cifrado con la clave HIELO
 
 ```python
 abc = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
@@ -116,7 +116,7 @@ PIENSO QUE EL MAR ESTA TRANQUILO POR LO QUE LAS TEMPRESTADES PODRIAN VENIR APART
 #### Resultado 
 
 <p align="center">
-  <img src="src/pregunta_16/comprobando.png"/>
+  <img src="src/pregunta_16/comprobando.PNG"/>
 </p>
 
 ### 17) Usando matemáticas discretas, descifre manualmente YGVMSSKKOX si la clave fue FORTALEZA en un alfabeto de 27 caracteres
