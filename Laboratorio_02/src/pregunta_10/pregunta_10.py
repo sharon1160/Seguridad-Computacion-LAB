@@ -65,7 +65,7 @@ def cifrar(texto, clave, modulo):
       ind += 1
       if ind == len(clave): 
         ind = 0
-    with open('texto-cifrado.txt', 'w') as output:
+    with open('texto-cifrado_191.txt', 'w') as output:
       output.write(texto_cifrado)
     print("TEXTO CIFRADO (modulo 191):\n\n",texto_cifrado,'\n')
 
