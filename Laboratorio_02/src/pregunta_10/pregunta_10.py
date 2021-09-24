@@ -55,7 +55,7 @@ def vignere(texto, clave, modulo):
         ind = 0
     with open('texto-cifrado_27.txt', 'w') as output:
       output.write(texto_cifrado)
-    print("TEXTO CIFRADO (modulo 27):\n\n",texto_cifrado,'\n')
+    print("\n",texto_cifrado,'\n')
 
   # Para cifrar con módulo 191
   elif modulo == 191:
@@ -72,7 +72,7 @@ def vignere(texto, clave, modulo):
         ind = 0
     with open('texto-cifrado_191.txt', 'w') as output:
       output.write(texto_cifrado)
-    print("TEXTO CIFRADO (modulo 191):\n\n",texto_cifrado,'\n')
+    print("\n",texto_cifrado,'\n')
 
   pausa = str(input("\nPresione enter para regresar..."))
 
@@ -89,10 +89,8 @@ def menu_modulo(texto,clave):
     opcion = int(input("Ingrese una opción(1-2-3): "))
 
     if opcion == 1:
-      os.system("clear") 
       vignere(texto, clave, 27)
     elif opcion == 2:
-      os.system("clear") 
       vignere(texto,clave,191)
     elif opcion == 3:
       break
