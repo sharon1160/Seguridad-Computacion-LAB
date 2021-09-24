@@ -25,40 +25,53 @@ def quitar_tildes(texto):
     texto = texto.replace(a1, a2)
   return texto
 
-############## FUNCIONES PARA EL CIFRADO ###############
-
-def generar_alfabeto():
-  lista_letras = list(string.ascii_uppercase)
-  posicion = lista_letras.index('N')
-  lista_letras = lista_letras[:posicion + 1] + ['Ñ'] + lista_letras[posicion + 1:]
-  return lista_letras # 27 letras
-
-def escribir_clave(texto, clave):
-  tabla_cifrado = []
-  clave_repetida = []
-  texto_lista = list(texto)
-  tabla_cifrado.append(texto_lista)
-  index = 0
-  for i in range(len(texto_lista)):
-    if index == len(clave):
-      index = 0
-    clave_repetida.append(clave[index])
-    index += 1
-  tabla_cifrado.append(clave_repetida)
-  return tabla_cifrado
-
-
-####################### CIFRADO ########################
-
-def cifrar(texto, clave, modulo):
+def preprocesar(texto):
   texto_claro = texto
   texto = eliminar_espacios_signos(texto)
   texto = quitar_tildes(texto)
   texto = a_mayusculas(texto)
+  return texto, texto_claro
 
-  tabla_de_cifrado = escribir_clave(texto, clave)
-  print(tabla_de_cifrado)
-  print()
+############## FUNCIONES PARA EL CIFRADO ###############
+
+def calcular_letra_cifrada(m, k, n):
+  return (m + k) % n
+  
+####################### CIFRADO ########################
+
+def cifrar(texto, clave, modulo):
+  texto, texto_claro = preprocesar(texto)
+  clave = a_mayusculas(clave)
+
+  if modulo == 27:
+    texto_cifrado = ""
+    alfabeto = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+    ind = 0
+    for car in texto:
+      caracterText_index = alfabeto.index(car)
+      caracterClav_index = alfabeto.index(clave[ind])
+      posicion_cifra = calcular_letra_cifrada(caracterText_index, caracterClav_index, 27)
+      texto_cifrado += alfabeto[posicion_cifra]
+      ind += 1
+      if ind == len(clave): 
+        ind = 0
+    print("TEXTO CIFRADO:\n",texto_cifrado,'\n')
+  elif modulo == 191:
+    texto_cifrado = ""
+    alfabeto = [chr(i) for i in range(33, 225)]
+    ind = 0
+    for car in texto:
+      caracterText_index = alfabeto.index(car)
+      caracterClav_index = alfabeto.index(clave[ind])
+      posicion_cifra = calcular_letra_cifrada(caracterText_index, caracterClav_index, 191)
+      texto_cifrado += alfabeto[posicion_cifra]
+      ind += 1
+      if ind == len(clave): 
+        ind = 0
+    with open('HERALDOSNEGROS_unicode_8.txt', 'w') as output:
+      output.write(texto_cifrado)
+    print("TEXTO CIFRADO:\n",texto_cifrado,'\n')
+
   pausa = str(input("\nPresione enter para regresar..."))
 
 ######################## MENUS ########################
@@ -78,7 +91,7 @@ def menu_modulo(texto,clave):
       cifrar(texto, clave, 27)
     elif opcion == 2:
       os.system("clear") 
-      # cifrar(texto,clave,191)
+      cifrar(texto,clave,191)
     elif opcion == 3:
       break
     os.system("clear") 
