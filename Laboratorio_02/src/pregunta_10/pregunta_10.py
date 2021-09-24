@@ -34,7 +34,7 @@ def preprocesar(texto):
   
 ####################### CIFRADO ########################
 
-def cifrar(texto, clave, modulo):
+def vignere(texto, clave, modulo):
   
   # Preprocesando texto plano
   texto, texto_claro = preprocesar(texto)
@@ -90,10 +90,10 @@ def menu_modulo(texto,clave):
 
     if opcion == 1:
       os.system("clear") 
-      cifrar(texto, clave, 27)
+      vignere(texto, clave, 27)
     elif opcion == 2:
       os.system("clear") 
-      cifrar(texto,clave,191)
+      vignere(texto,clave,191)
     elif opcion == 3:
       break
     os.system("clear") 
