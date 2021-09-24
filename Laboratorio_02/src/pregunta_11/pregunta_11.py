@@ -26,22 +26,20 @@ def quitar_tildes(texto):
   return texto
 
 def preprocesar(texto):
-  texto_claro = texto
   texto = eliminar_espacios_signos(texto)
   texto = quitar_tildes(texto)
-  texto = a_mayusculas(texto)
-  return texto, texto_claro
+  return texto
   
 ####################### CIFRADO ########################
 
 def vignere(texto, clave, modulo):
-  
-  # Preprocesando texto plano
-  texto, texto_claro = preprocesar(texto)
-  clave = a_mayusculas(clave)
 
   # Para cifrar con módulo 27
   if modulo == 27:
+    # Preprocesando texto plano
+    texto = preprocesar(texto)
+    texto = a_mayusculas(texto)
+    clave = a_mayusculas(clave)
     texto_cifrado = ""
     alfabeto = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
     ind = 0
@@ -59,14 +57,33 @@ def vignere(texto, clave, modulo):
 
   # Para cifrar con módulo 191
   elif modulo == 191:
+    # Solo quitamos espacios y saltos de línea
+    texto = texto.replace(' ','').replace('\n','')
+    clave = a_mayusculas(clave)
     texto_cifrado = ""
-    alfabeto = [chr(i) for i in range(33, 225)]
+    # De esta lista se excluirá carácteres con \
+    alfabeto = [chr(i) for i in range(33, 256)]
     ind = 0
     for car in texto:
       caracterText_index = alfabeto.index(car)
       caracterClav_index = alfabeto.index(clave[ind])
       posicion_cifra = (caracterText_index + caracterClav_index) % 191
-      texto_cifrado += alfabeto[posicion_cifra]
+
+      # Para no contar carácteres con \
+      if posicion_cifra < 94:
+        texto_cifrado += alfabeto[posicion_cifra]
+      elif posicion_cifra >= 94:
+        posicion_cifra += 32
+        if posicion_cifra >= len(alfabeto):
+          posicion_cifra = posicion_cifra % 191
+          texto_cifrado += alfabeto[posicion_cifra]
+        else:
+          # En el peor de los casos podría volver a caer en un caracter /
+          if posicion_cifra == 126 or posicion_cifra == 127 or posicion_cifra == 140:
+            posicion_cifra %= 32
+            texto_cifrado += alfabeto[posicion_cifra]
+          else:
+            texto_cifrado += alfabeto[posicion_cifra]
       ind += 1
       if ind == len(clave): 
         ind = 0
@@ -109,14 +126,14 @@ def menu():
 
     if opcion == 1:
       file_name = str(input("\nIngrese nombre del archivo (Ej: archivo.txt):\n"))
-      clave = str(input("\nIngrese la clave de cifrado:\n"))
+      clave = str(input("\nIngrese la clave de cifrado (en mayúsculas):\n"))
       os.system("clear") 
       with open(file_name, 'r', encoding = 'utf-8-sig') as entrada:
         texto = entrada.read()
         menu_modulo(texto, clave)
     elif opcion == 2:
       texto = str(input("\nIngrese el texto:\n"))
-      clave = str(input("\nIngrese la clave de cifrado:\n"))
+      clave = str(input("\nIngrese la clave de cifrado (en mayúsculas):\n"))
       os.system("clear") 
       menu_modulo(texto, clave)
     elif opcion == 3:
