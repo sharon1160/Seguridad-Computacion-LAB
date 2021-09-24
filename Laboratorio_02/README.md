@@ -9,13 +9,13 @@ El código fuente fue desarrollado en Python.
 
 ```python
 def vignere(texto, clave, modulo):
-  
-  # Preprocesando texto plano
-  texto, texto_claro = preprocesar(texto)
-  clave = a_mayusculas(clave)
 
   # Para cifrar con módulo 27
   if modulo == 27:
+    # Preprocesando texto plano
+    texto = preprocesar(texto)
+    texto = a_mayusculas(texto)
+    clave = a_mayusculas(clave)
     texto_cifrado = ""
     alfabeto = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
     ind = 0
@@ -29,24 +29,43 @@ def vignere(texto, clave, modulo):
         ind = 0
     with open('texto-cifrado_27.txt', 'w') as output:
       output.write(texto_cifrado)
-    print("TEXTO CIFRADO (modulo 27):\n\n",texto_cifrado,'\n')
+    print("\n",texto_cifrado,'\n')
 
   # Para cifrar con módulo 191
   elif modulo == 191:
+    # Solo quitamos espacios y saltos de línea
+    texto = texto.replace(' ','').replace('\n','')
+    clave = a_mayusculas(clave)
     texto_cifrado = ""
-    alfabeto = [chr(i) for i in range(33, 225)]
+    # De esta lista se excluirá carácteres con \
+    alfabeto = [chr(i) for i in range(33, 256)]
     ind = 0
     for car in texto:
       caracterText_index = alfabeto.index(car)
       caracterClav_index = alfabeto.index(clave[ind])
       posicion_cifra = (caracterText_index + caracterClav_index) % 191
-      texto_cifrado += alfabeto[posicion_cifra]
+
+      # Para no contar carácteres con \
+      if posicion_cifra < 94:
+        texto_cifrado += alfabeto[posicion_cifra]
+      elif posicion_cifra >= 94:
+        posicion_cifra += 32
+        if posicion_cifra >= len(alfabeto):
+          posicion_cifra = posicion_cifra % 191
+          texto_cifrado += alfabeto[posicion_cifra]
+        else:
+          # En el peor de los casos podría volver a caer en un caracter /
+          if posicion_cifra == 126 or posicion_cifra == 127 or posicion_cifra == 140:
+            posicion_cifra %= 32
+            texto_cifrado += alfabeto[posicion_cifra]
+          else:
+            texto_cifrado += alfabeto[posicion_cifra]
       ind += 1
       if ind == len(clave): 
         ind = 0
     with open('texto-cifrado_191.txt', 'w') as output:
       output.write(texto_cifrado)
-    print("TEXTO CIFRADO (modulo 191):\n\n",texto_cifrado,'\n')
+    print("\n",texto_cifrado,'\n')
 
   pausa = str(input("\nPresione enter para regresar..."))
 ```
