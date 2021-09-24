@@ -63,7 +63,7 @@ def cifrar(texto, clave, modulo):
       ind += 1
       if ind == len(clave): 
         ind = 0
-    with open('HERALDOSNEGROS_unicode_8.txt', 'w') as output:
+    with open('texto-cifrado.txt', 'w') as output:
       output.write(texto_cifrado)
     print("TEXTO CIFRADO:\n",texto_cifrado,'\n')
 
