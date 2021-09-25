@@ -131,6 +131,22 @@ RGWMLYPSTHIWMPWZTSLMEXVHEBNTXZKJCDZIVPVSASPPNWYSIEWZNINHTNIMGAVGTBSSZWLDIWMPOWLJ
 rÀ·-Å¹Ê³´ÁÂ·Æ±·º´³Å-¿¸¶Á¾¼mµ¸ºÄÃ½½º©¶±¶³»XÊ±Ç·cr´ÁÂ-Å¼¶ÀÂ³Ë¸¸¶È¯Á³À©¿¯Ä¾¾Á»¼¼¾Ä¾Ä³¶-¶©Â°¸¯Ä-¿¼Ç¯½Áµ½Å»Ä²´ÂÁ¬Â-Á²]¯`vÂ-Ç³ÂºÁ»È®¾±¸³À¼¸µº¼Ã³È±¸²Ä±¾»Á¸´º¶¼¾·À±¶±¶ÀÄ¼À½¸¾Ä±°»»¶Â°¶±¸¯Æ½Æ»Ê³a½ÅV?-ËP½Â³¼¸«¶²°»³Z´¶¶±Á³Ë-Á¬Ä¿Ä³È©Æ©Ë·Å·Ä-¿µº¸¾À¶V´¬ºÂÄÄ»¬´V
 ```
 
+### 12) Verifica el resultado obtenido a partir del cifrador Criptoclásicos v2.1
+
+#### Resultado con módulo 27
+- __Clave usada:__ POSITIVO
+<p align="center">
+<img src="src/pregunta_12/mod_27_criptoclasicos.png" />
+<img src="src/pregunta_11/screens/mod_27.png" />
+</p>
+
+#### Resultado con módulo 191
+- __Clave usada:__ POSITIVO
+<p align="center">
+<img src="src/pregunta_12/mod_191_criptoclasicos.png" />
+<img src="src/pregunta_11/screens/mod_191.png" />
+</p>
+
 ### 15) Desarrolle un algoritmo que encuentre el texto claro si recibió la cifra WPIXHVYYOSRTECSZBEEGHUUFWRWTZGRWUFSRIWESSXVOHAIHOHWWHCWHUZOBOZEAOYBMCRLTEYOTI y se sabe que ha cifrado con la clave HIELO
 
 ```python
