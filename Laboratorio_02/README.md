@@ -80,7 +80,10 @@ Hermoso es el cielo en el atardecer de tus ojos maravillosos
   <img src="src/pregunta_10/screens/main_menu.png"/>
 </p>
 <p align="center">
-<img src="src/pregunta_10/screens/modulo_menu.png" />
+<img src="src/pregunta_10/screens/mod_27.png" />
+</p>
+<p align="center">
+<img src="src/pregunta_10/screens/mod_191.png" />
 </p>
 
 #### Resultado con módulo 27
@@ -92,7 +95,7 @@ JMVWDUWIDSNKMOZQMQOZCBECRGKICRGBYDDLWWWOTIZSZNWWZH
 #### Resultado con módulo 191
 
 ```
-jmvx}uwi~snkmpzqmrpzc|e}rgki}rg|y~}lwwxotiztznwwz
+j-¶¸½µ·©¾³®«-°º±-²°º£¼¥½²§«©½²§¼¹¾½¬··¸¯´©º´º®··ºÁ
 ```
 
 ### 11) Verificar cifrando “Creer que es posible es el paso número uno hacia el éxito. Despertarse y ...". Usando la clave POSITIVO
@@ -109,6 +112,12 @@ que vas a vivir el mejor día de tu vida.
 <p align="center">
 <img src="src/pregunta_11/screens/main_menu.png" />
 </p>
+<p align="center">
+<img src="src/pregunta_11/screens/mod_27.png" />
+</p>
+<p align="center">
+<img src="src/pregunta_11/screens/mod_191.png" />
+</p>
 
 #### Resultado con módulo 27
 
@@ -119,7 +128,7 @@ RGWMLYPSTHIWMPWZTSLMEXVHEBNTXZKJCDZIVPVSASPPNWYSIEWZNINHTNIMGAVGTBSSZWLDIWMPOWLJ
 #### Resultado con módulo 191
 
 ```
-rwmystwqwztsmxv~|uxz}}zivqvs{sqwys~wzitm{vt|stzw}wqwtrwktuwwpwtzv|qzwys}vwxtywp|mmz~n|k~s}wuxvswwrk{~~sztvw}wuqtz|}w~kv{x|ptk~o{mG}zw~tvosuiwioAoivzzt|vw}zps~|~~tzm}wrxovm}wso
+rÀ·-Å¹Ê³´ÁÂ·Æ±·º´³Å-¿¸¶Á¾¼mµ¸ºÄÃ½½º©¶±¶³»XÊ±Ç·cr´ÁÂ-Å¼¶ÀÂ³Ë¸¸¶È¯Á³À©¿¯Ä¾¾Á»¼¼¾Ä¾Ä³¶-¶©Â°¸¯Ä-¿¼Ç¯½Áµ½Å»Ä²´ÂÁ¬Â-Á²]¯`vÂ-Ç³ÂºÁ»È®¾±¸³À¼¸µº¼Ã³È±¸²Ä±¾»Á¸´º¶¼¾·À±¶±¶ÀÄ¼À½¸¾Ä±°»»¶Â°¶±¸¯Æ½Æ»Ê³a½ÅV?-ËP½Â³¼¸«¶²°»³Z´¶¶±Á³Ë-Á¬Ä¿Ä³È©Æ©Ë·Å·Ä-¿µº¸¾À¶V´¬ºÂÄÄ»¬´V
 ```
 
 ### 15) Desarrolle un algoritmo que encuentre el texto claro si recibió la cifra WPIXHVYYOSRTECSZBEEGHUUFWRWTZGRWUFSRIWESSXVOHAIHOHWWHCWHUZOBOZEAOYBMCRLTEYOTI y se sabe que ha cifrado con la clave HIELO
